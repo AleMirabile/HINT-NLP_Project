@@ -26,26 +26,18 @@ The dataset used is the AG News Corpus. For this project, I extracted a balanced
 
 ## Methodology
 
-We follow a structured methodology for our NLP project, including:
+I follow a structured methodology for my NLP project, including:
+Stratified train/validation/test splits to ensure balanced classes
 
--Splitting datasets into training, validation, and test sets with stratification to maintain balanced classes.
+-Text cleaning: lowercasing, stopword/punctuation removal, number stripping, whitespace normalization
 
--Lowercasing text and removing stopwords, punctuation, and irrelevant characters.
+-Tokenization via NLTK’s wordpunct_tokenize and stemming with Porter Stemmer
 
--Removing numeric values due to noise and formatting issues in headlines.
+-Construction of sparse TF–IDF matrices from Bag-of-Words
 
--Normalizing whitespace and removing isolated, irrelevant tokens (e.g., the frequent 's' issue).
+-Transformer tokenization using Hugging Face for BERT and GPT-2
 
--Employing tokenization techniques (wordpunct_tokenize from NLTK).
-
--Implementing stemming with Porter Stemmer to reduce word forms without overly aggressive truncation.
-
--Creating sparse TF-IDF matrices from Bag-of-Words representations.
-
--Tokenizing text using Hugging Face's pretrained tokenizers for transformer models (BERT, GPT-2).
-
--Adopting prompt-based classification, reframing the classification task as a language-model completion task for GPT-2.
-
+-Prompt-based framing for GPT-2, turning classification into a language-model completion task
 ## Models
 
 Our project explores the performance of three distinct models:
